@@ -1,0 +1,95 @@
+/*
+Una clase se representa con un "."
+Un Id se representa con un "#"
+*/
+
+/**************ATRIBUTOS GENERALES**************/
+body{
+    font-family: Verdana, Arial, Georgia;
+    text-color: #032408;
+}
+
+nav ul li{
+    display: inline-block;  /*Muestra los elementos de forma horizontal*/
+    margin-right: 20px;
+    color: #1D1D1D;
+    cursor: pointer;
+    padding: 5px;
+    -webkit-transition: all 0.5s linear;
+    -moz-transition: all 0.5s linear;
+    -o-transition: all 0.5s linear;
+}
+
+nav ul li:hover{
+    color: #FFF;
+    background-color: #6cf;
+    border-radius: 5px;
+}
+
+a:visited{
+    color:#007BC4;
+    font-weight: bold; 
+}
+
+nav ul li a{
+    text-decoration: none;
+    color: #007BC4;
+}
+
+#main{
+    height: 450px;
+}
+
+#web{
+    width: 1300px;
+    margin: 0 auto;
+}
+
+#header{
+    height: 100px;
+    background-color: #007BC4;
+}
+
+#content{
+    /*width: 80%;*/
+    background-color: #66ffff;
+    min-height: 400px;
+    float: right; /*float:right para colocar el contenido a la derecha*/
+    overflow: scroll;
+    position: relative;
+    left: 290px;
+    width: 500px;
+    margin:0 auto;
+    text-align:center;
+}
+
+#footer{
+    height:40px;
+    background-color: #007BC4;
+    clear:both;
+    text-align: center;
+    color: #FFF;
+    font-family: Verdana, Arial, Georgia;
+}
+
+#footer span{
+    font-size: 10px;
+}
+
+
+/**************ESTADOS**************/
+#data{
+    display: none;
+    float: right;
+    margin: 0px 300px;
+}
+
+#area_res{
+    position:absolute;
+    width:400px;
+    height:303px;
+    z-index:1;
+    left: 400px;
+    top: 180px;
+    display: none;
+}

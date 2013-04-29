@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Efecto con jQuery</title>
+		<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+		<style>
+			#div_contenido {
+				width: 600px;
+				height: 200px;
+				background: #ccc;
+				display: none;
+			}
+		</style>
+		<script>
+			$(document).ready(function () {
+				// Hacer el efecto con el primer link <<Mostrar Div>>
+				$('#mostrar').on('click', function (e) {
+					e.preventDefault();
+					$('#div_contenido').fadeIn();
+				});
+
+				// Hacer el efecto con el segundo link <<Ocultar Div>>
+				$('#ocultar').on('click', function (e) {
+					e.preventDefault();
+					$('#div_contenido').fadeOut();
+				});
+
+				// Hacer el efecto con el tercer link <<Mostrar y Ocultar Div>>
+				$('#mostrar_y_ocultar').click(function () {
+					$('#div_contenido').toggle();
+				});
+
+				/*$('#div_contenido').toggle(function () {
+					$('#div_contenido').fadeIn();
+				}, function () {
+					$('#div_contenido').fadeOut();
+				});*/
+			});
+		</script>
+	</head>
+	<body>
+		<a href="#mostrar" id="mostrar">Mostrar Div</a>
+		<br>
+		<a href="#ocultar" id="ocultar">Ocultar Div</a>
+		<br>
+		<a href="#mostrar_y_ocultar" id="mostrar_y_ocultar">Mostrar y Ocultar Div</a>
+		<hr>
+		<div id="div_contenido"></div>
+	</body>
+</html>
